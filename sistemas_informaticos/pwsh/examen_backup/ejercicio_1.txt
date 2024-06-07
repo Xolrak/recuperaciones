@@ -1,0 +1,21 @@
+1 - Construir RAID-5 en R:
+
+Abrir el Administrador de Servidores.
+Ir a "Herramientas" y seleccionar "Administrador de almacenamiento".
+Crear un nuevo grupo de almacenamiento y seleccionar los discos Raid5-A, Raid5-B, Raid5-C y Raid5-D.
+Elegir RAID-5 como nivel de RAID.
+Asignar la letra de unidad R: y formatear el volumen.
+
+2 - Simular fallo de un disco:
+
+En el Administrador de almacenamiento, seleccionar el disco a fallar (por ejemplo, Raid5-B).
+Marcarlo como "Sin conexión".
+Comprobar pérdida de datos:
+
+3- Intentar acceder al directorio R:\BIPAI-WEB\css.
+En un RAID-5 funcional, no debería haber pérdida de datos, aunque el rendimiento podría verse afectado.
+Reparar el RAID-5:
+
+4- Reemplazar el disco dañado físicamente (si se trata de un entorno real).
+En el Administrador de almacenamiento, seleccionar el disco "Sin conexión" y marcarlo como "En línea".
+El RAID-5 debería comenzar a reconstruirse automáticamente.

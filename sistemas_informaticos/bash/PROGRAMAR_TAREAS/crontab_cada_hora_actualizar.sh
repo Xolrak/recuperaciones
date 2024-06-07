@@ -1,0 +1,2 @@
+# Crear una tarea cron que se ejecute cada hora y que compruebe si hay actualizaciones disponibles para los paquetes del sistema. Si hay actualizaciones disponibles, debe enviar un correo electrónico al usuario con la lista de actualizaciones.
+0 * * * * apt update && if [ -n "$(apt list --upgradable)" ]; then echo "$(apt list --upgradable)" | mail -s "Actualizaciones disponibles" tu_correo@example.com; fi

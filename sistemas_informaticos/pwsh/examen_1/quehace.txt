@@ -1,0 +1,11 @@
+# Array que contiene las extensiones de archivo
+$extensiones = "txt","doc","xls","iso"
+# Contador para llevar la cuenta de las extensiones procesadas
+$contador = 0
+
+# Bucle que itera sobre cada extensión en el array
+foreach ($extension in $extensiones) {
+    $contador++  # Incrementa el contador en cada iteración
+    Write-Host $extension  # Imprime la extensión actual
+    Write-Host $contador  # Imprime el valor actual del contador
+}

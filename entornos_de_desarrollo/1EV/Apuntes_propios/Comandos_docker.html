@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="UTF-8">
+<title>🐳 Comandos Docker Esenciales 🛠️</title>
+<style>
+body { font-family: sans-serif; line-height: 1.6; } /* Mejoramos la legibilidad */
+h1, h2, h3 { color: #007bff; margin-bottom: 10px; } 
+code { background-color: #f8f9fa; padding: 2px 4px; border-radius: 4px; font-family: monospace; } /* Fuente monospace para código */
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #dee2e6; padding: 8px; text-align: left; }
+th { background-color: #e9ecef; } /* Fondo gris claro para encabezados */
+</style>
+</head>
+<body>
+
+<h1>🐳 Comandos Docker Esenciales 🛠️</h1>
+
+<p>Docker es una plataforma de contenedores que facilita la creación, implementación y ejecución de aplicaciones en entornos aislados. Aquí tienes algunos comandos básicos para empezar:</p>
+
+<h2>🏃 docker run</h2>
+<p>Crea y ejecuta un contenedor a partir de una imagen. Es el comando más importante de Docker.</p>
+
+<code>docker run [opciones] imagen [comando] [argumentos]</code>
+
+<h3>Opciones comunes:</h3>
+<table>
+  <tr>
+    <th>Opción</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td><code>-it</code></td>
+    <td>Modo interactivo con terminal. Útil para acceder a una shell dentro del contenedor.</td>
+  </tr>
+  <tr>
+    <td><code>-d</code></td>
+    <td>Modo daemon (segundo plano). El contenedor se ejecuta en segundo plano.</td>
+  </tr>
+  <tr>
+    <td><code>-p</code></td>
+    <td>Publica puertos del contenedor en el host. Formato: <code>-p puerto_host:puerto_contenedor</code></td>
+  </tr>
+  <tr>
+    <td><code>--name</code></td>
+    <td>Asigna un nombre al contenedor.</td>
+  </tr>
+  <tr>
+    <td><code>-v</code></td>
+    <td>Monta un volumen. Permite compartir datos entre el host y el contenedor.</td>
+  </tr>
+  <tr>
+    <td><code>-e</code></td>
+    <td>Define variables de entorno dentro del contenedor.</td>
+  </tr>
+</table>
+
+<h3>Ejemplos:</h3>
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td><code>docker run -it --name mi_ubuntu ubuntu</code></td>
+    <td>Inicia un contenedor Ubuntu interactivo llamado "mi_ubuntu".</td>
+  </tr>
+  <tr>
+    <td><code>docker run -d -p 80:80 nginx</code></td>
+    <td>Inicia un servidor web Nginx en segundo plano, accesible en el puerto 80 del host.</td>
+  </tr>
+</table>
+
+<h2>🔍 docker ps</h2>
+<p>Lista los contenedores en ejecución. Usa <code>docker ps -a</code> para ver todos los contenedores (incluidos los detenidos).</p>
+
+<h2>🛠️ docker exec</h2>
+<p>Ejecuta un comando dentro de un contenedor en ejecución.</p>
+
+<code>docker exec [opciones] nombre_contenedor [comando] [argumentos]</code>
+
+<table>
+    <tr>
+      <th>Opción</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td><code>-it</code></td>
+      <td>Modo interactivo con terminal. Útil para acceder a una shell dentro del contenedor.</td>
+    </tr>
+    <tr>
+      <td><code>-d</code></td>
+      <td>Modo daemon (segundo plano). El contenedor se ejecuta en segundo plano.</td>
+    </tr>
+    <tr>
+      <td><code>-e</code></td>
+      <td>Define variables de entorno dentro del contenedor.</td>
+    </tr>
+  </table>
+
+<h3>Ejemplos:</h3>
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td><code>docker exec -it mi_ubuntu bash</code></td>
+    <td>Abre una shell Bash interactiva dentro del contenedor "mi_ubuntu".</td>
+  </tr>
+  <tr>
+    <td><code>docker exec mi_ubuntu ls /</code></td>
+    <td>Lista el contenido del directorio raíz dentro del contenedor "mi_ubuntu".</td>
+  </tr>
+</table>
+
+<h2>📜 docker logs</h2>
+<p>Muestra los registros (logs) de un contenedor.</p>
+
+<code>docker logs [opciones] nombre_contenedor</code>
+
+<h2>🔄 docker cp</h2>
+<p>Copia archivos o directorios entre el contenedor y el sistema anfitrión.</p>
+
+<code>docker cp [opciones] contenedor:ruta_origen ruta_destino</code>
+
+<h3>Ejemplos:</h3>
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td><code>docker cp mi_contenedor:/ruta/archivo.txt ./</code></td>
+    <td>Copia `archivo.txt` del contenedor "mi_contenedor" al directorio actual del host.</td>
+  </tr>
+  <tr>
+    <td><code>docker cp ./archivo.txt mi_contenedor:/ruta/</code></td>
+    <td>Copia `archivo.txt` del host al directorio "/ruta/" dentro del contenedor "mi_contenedor".</td>
+  </tr>
+</table>
+
+</body>
+</html>

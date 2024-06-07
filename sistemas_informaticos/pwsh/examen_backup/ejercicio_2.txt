@@ -1,0 +1,9 @@
+Programar tarea (copy-total.ps1):
+
+Abrir el Programador de Tareas.
+Crear una nueva tarea.
+Configurar el desencadenador para que se ejecute todos los lunes a la hora especificada.
+En la acción, seleccionar "Iniciar un programa" y especificar la ruta al script copy-total.ps1.
+
+Programar tarea (copy-incr.ps1):
+Similar a la programación de copy-total.ps1, pero configurar el desencadenador para que se ejecute todos los días a la hora especificada.

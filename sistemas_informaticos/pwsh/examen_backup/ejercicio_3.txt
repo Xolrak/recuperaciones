@@ -1,0 +1,10 @@
+Programar tarea (wb_copia_enlocal.ps1):
+
+Abrir el Programador de Tareas.
+Crear una nueva tarea.
+Configurar el desencadenador para que se ejecute todos los lunes a la hora especificada.
+En la acción, seleccionar "Iniciar un programa" y especificar la ruta al script wb_copia_enlocal.ps1.
+
+Habilitar copia en wbadmin:
+Abrir wbadmin desde la línea de comandos.
+Utilizar el comando "wbadmin enable backup" para configurar la copia programada, especificando el destino, la frecuencia y la hora.

@@ -1,0 +1,2 @@
+# Copia de seguridad total el último martes de cada mes
+59 23 * * 2 [ $(date -d +7day +%d) -le 7 ] && tar -cf /BACKUPS/GAS-total-$(date +"%y%m%d").tar /GASOLINERA
