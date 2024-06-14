@@ -1,0 +1,110 @@
+/* CLASES */
+
+/* CLASE DEL CONTENEDOR PRINCIPAL */
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+    text-align: center;
+}
+
+/* BARRA SUPERIOR DE NAVEGACIÓN */
+.navbar {
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    box-shadow: -5px 8px 15px -1px rgba(35, 13, 96, 0.72);
+    background-color: #27094e;
+    
+}
+.navbar img {
+    width: 60px;
+}
+.navbar a {
+    color: rgb(36, 151, 159);
+    margin: auto;
+    text-decoration: none;
+}
+.navbar a:hover {
+    text-decoration: underline; /* Añade subrayado al enlace cuando se pasa el cursor sobre él */
+}
+
+/* TITULOS */
+.titulos {
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid #524973;
+}
+
+/* TEXTO */
+.texto {
+    font-size: 1.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto img {
+    border-radius: 15px; /* Bordes redondeados */
+    width: 1080px;
+}
+
+/* LISTAS */
+.objetos_cos {
+    font-size: 1.7em;
+    font-family:'Courier New', Courier, monospace;
+}
+.objetos_cos img {
+    width: 1080px;
+    text-align: center;
+    border-radius: 15px; /* Bordes redondeados */
+}
+.objetos_cos p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* FORMULARIOS */
+.formularios {
+    background-color: #3e1ac0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* He aumentado el ancho máximo para una mejor visualización */
+    width: 100%;
+    margin: 0 auto; /* Centra el formulario en la página */
+    color: #fff; /* Cambia el color del texto a blanco para mejor contraste */
+    font-family: Arial, sans-serif; /* Define una fuente */
+}
+
+.formularios label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formularios input,
+.formularios textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formularios button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formularios button:hover {
+    background-color: #45a049;
+}
+
+
+/* ESTILOS GENERALES */
+body {
+    background: #050a46;
+}
